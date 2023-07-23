@@ -14,7 +14,7 @@ This project was implemented using cypress, thus to run on your local machine, y
 #### npx cypress run |TEST_SPEC_PATH| --env ENVIRONMENT_VARIABLES
 For example:
 ```bash
-npx cypress run cypress/e2e/api tests/weather.api.spec.cy.js --env key=d752d6efd45a4c458b611524231407
+npx cypress run --spec "cypress/e2e/api tests/weather.api.spec.cy.js" --env key=d752d6efd45a4c458b611524231407 --headless
 ```
 
 This will run the tests in headless mode.
@@ -35,7 +35,7 @@ Notes
 ### How to run the UI Tests: Local Machine
 You can run in two ways.
 * Use the Cypress interface by launching ```cypress open``` via your CLI(terminal)
-* Use the Command ```cypress run cypress/e2e/ui tests/ui.spec.cy.js``` also via your CLI(terminal)
+* Use the Command ```cypress run --spec "cypress/e2e/ui tests/ui.spec.cy.js" --headless``` also via your CLI(terminal)
     * _Note: the path is the relative path of the ui tests as stored in this repo_
 
 ### Packages used in this project
