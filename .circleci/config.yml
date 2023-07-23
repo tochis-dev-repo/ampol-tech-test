@@ -1,8 +1,11 @@
 version: 2.1
+# Uses the official Cypress Orb
+# https://circleci.com/developer/orbs/orb/cypress-io/cypress
 orbs:
-  cypress: cypress-io/cypress@3.1.1
+  cypress: cypress-io/cypress@3
 workflows:
   build:
     jobs:
       - cypress/run:
-          cypress-command: 'npx cypress run'
+          parallelism: 2 # Uses 2 parallel instances
+          cypress-command: 'npx cypress run --record --parallel'
