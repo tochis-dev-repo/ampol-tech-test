@@ -44,3 +44,8 @@ The following packages were used:
 * [cypress-real-events](https://www.npmjs.com/package/cypress-real-events): _this is a package I found to simulate real events, 
 in this case the 'hover' event. The reason I used this package is because, the standard .trigger or invoke were not doing the job_
     * I will note that there is a drawback to using this package. It only works on chrome browsers 🙁. With enough time, I should be able to find a more suitable solution.
+
+### To watch the project on CircleCI
+You can watch the project via [this link](https://cloud.cypress.io/invitation/881bb8d1-40f1-46aa-a85e-37e218c8265a)
+
+It will take you to cypress cloud, where I have set the project up through Circle CI to run anytime I make a push to my repo
