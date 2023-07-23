@@ -34,8 +34,8 @@ Notes
 ## Part Two: UI Test
 ### How to run the UI Tests: Local Machine
 You can run in two ways.
-* Use the Cypress interface by launching ```cypress open``` via your CLI(terminal)
-* Use the Command ```cypress run --spec "cypress/e2e/ui tests/ui.spec.cy.js" --headless``` also via your CLI(terminal)
+* Use the Cypress interface by launching ```npx cypress open``` via your CLI(terminal)
+* Use the Command ```npx cypress run --spec "cypress/e2e/ui tests/ui.spec.cy.js" --headless``` also via your CLI(terminal)
     * _Note: the path is the relative path of the ui tests as stored in this repo_
 
 ### Packages used in this project
