@@ -8,8 +8,19 @@ folder containing the package.json and enter the following command:
 npm install
 ```
 This will install all the necessary dependencies required for the project to run smoothly.
+
+## Run all tests on local machine
+You can run all tests by simply going to your CLI (Terminal) and entering the following command:
+```bash
+npx cypress run --env key=d752d6efd45a4c458b611524231407 --headless
+```
+**NOTE**
+* I passed in the key as an environment variable on the local machine, but on the CI it is stored properly (as is the standard practice)
+    * I didn't store the key in a config file, and ideally **the key should not be visible in a README file** I only showed the key here because this is a test project. Real projects should **NEVER** expose keys.
+
+
 ## Part One: API Test
-### How to run the framework: Local Machine
+### How to run the API Tests: Local Machine
 This project was implemented using cypress, thus to run on your local machine, you can use one of the following commands:
 #### npx cypress run |TEST_SPEC_PATH| --env ENVIRONMENT_VARIABLES
 For example:
@@ -29,7 +40,6 @@ npx cypress open --env key=d752d6efd45a4c458b611524231407
 
 Notes
 * You can access video results of the test in the _cypress/videos_ folder. Also the results will be displayed in the console of your CLI.
-* I didn't store the key in a config file, and ideally **the key should not be visible in a README file** I only showed the key here because this is a test project. Real projects should **NEVER** expose keys.
 
 ## Part Two: UI Test
 ### How to run the UI Tests: Local Machine
@@ -48,4 +58,6 @@ in this case the 'hover' event. The reason I used this package is because, the s
 ### To watch the project on CircleCI
 You can watch the project via [this link](https://cloud.cypress.io/invitation/881bb8d1-40f1-46aa-a85e-37e218c8265a)
 
-It will take you to cypress cloud, where I have set the project up through Circle CI to run anytime I make a push to my repo
+It will take you to cypress cloud, where I have set the project up through Circle CI to run anytime I make a push to my repo.
+
+* The invitation links are limited as my cypress cloud account is free tier. If you need a new link, please contact me. 🙂
