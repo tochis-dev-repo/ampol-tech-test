@@ -1,14 +1,8 @@
 version: 2.1
-jobs:
+orbs:
+  cypress: cypress-io/cypress@1.0.0
+workflows:
   build:
-    docker:
-      - image: cypress/browsers:node14.17.0-chrome89-ff89
-    working_directory: ~/app
-    steps:
-      - checkout
-      - run:
-          name: Install Dependencies
-          command: npm install
-      - run:
-          name: Run Cypress Tests
-          command: npm run test
+    jobs:
+      - cypress/run:
+           record: true
