@@ -28,6 +28,7 @@
     "cypress": "^12.17.2"
   },
   "dependencies": {
+    "cypress-real-events": "^1.9.1",
     "xml-js": "^1.6.11"
   }
 }
