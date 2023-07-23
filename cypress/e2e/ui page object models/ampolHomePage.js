@@ -1,6 +1,10 @@
 const BasePage = require('./basePage');
 
 class HomePage extends BasePage {
+  constructor() {
+    super(Cypress.env('baseUrl'));
+  }
+
   get yourVehicleButton() {
     return this.getTagWithLabelText('a', /your vehicle/i);
   }
